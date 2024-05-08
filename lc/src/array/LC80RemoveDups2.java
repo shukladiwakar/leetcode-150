@@ -24,7 +24,7 @@ public class LC80RemoveDups2 {
             } else if (prev == nums[i] && prevCount < 2) {
                 nums[op++] = prev;
                 prevCount++;
-            } else {
+            } else if (prev != nums[i]) {
                 prevCount = 0;
                 prev = nums[i];
                 nums[op++] = prev;
