@@ -30,3 +30,7 @@ S
 #.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
 Å
 Q.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,1/0/10a03f31c4dce92cb371e761ce9429428bb6c176
+V
+&lc/src/array/LC58LengthOfLastWord.java,e/a/ea1accbe79be5769a9059126211f55769726f423
+S
+#lc/src/array/LC151ReverseWords.java,5/e/5e6c99cbfecd898fe6339752d074fbd3521c439b
