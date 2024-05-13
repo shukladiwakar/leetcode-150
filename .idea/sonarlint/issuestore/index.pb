@@ -34,3 +34,11 @@ V
 &lc/src/array/LC58LengthOfLastWord.java,e/a/ea1accbe79be5769a9059126211f55769726f423
 S
 #lc/src/array/LC151ReverseWords.java,5/e/5e6c99cbfecd898fe6339752d074fbd3521c439b
+P
+ lc/src/array/LC28FirstIndex.java,d/2/d224e9b117754362a63fb0f3b418fdd684b97c79
+M
+lc/src/algos/KadanesAlgo.java,b/5/b5713c164a33d5ba3f3d1942b9f53be2739d7b32
+U
+%lc/src/dp/LC121BestTimeToBuySell.java,4/5/45d1a680064c39a920b17255c4546e6f70fe7355
+R
+"lc/src/array/LC122BuyAndSell2.java,9/3/931eccae105c31b16759e977e5407c9d861129e0
