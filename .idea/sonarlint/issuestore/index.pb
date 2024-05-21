@@ -44,3 +44,31 @@ R
 "lc/src/array/LC122BuyAndSell2.java,9/3/931eccae105c31b16759e977e5407c9d861129e0
 M
 lc/src/array/LC274HIndex.java,d/f/dff747ee883ddce24db9ea9597a756a1de5236ae
+X
+(lc/src/array/LC238ProductExceptSelf.java,3/d/3dcea1a8d82ceee9665acd70f408a8f9f3ff92df
+S
+#lc/src/array/LC12Integer2Roman.java,2/f/2fc48364bf88af3dac58aad0de640d02082a91a3
+W
+'lc/src/array/LC42TrappingRainWater.java,2/7/27e92809ec80ce564413283d29707af7924e93f3
+X
+(lc/src/twopointers/LC167TwoPointers.java,8/1/81589ace35b75aabfbf6a1b0301663228d4b2eb5
+Z
+*lc/src/twopointers/LC392IsSubsequence.java,b/c/bc05c58e797caa8838adf2de8aec6539bf3304dd
+P
+ lc/src/maps/LC205Isomorphic.java,3/9/39fb61f453cb63591ac142df26e50f9c75e6f3fa
+E
+lc/src/dp/Jenkinsfile,8/d/8da7081f8c4ce520aec2610d7a9c383aa291d8a6
+T
+$lc/src/sideLearning/FibPLayList.java,5/4/5407ee681cd02f61c8416582b84d7fabb02a1c4d
+T
+$lc/src/array/LC70ClimbingStairs.java,e/d/ed7967fc40f662cd8162818792b71aa92ddcd002
+L
+lc/src/dp/LC403FrogJump.java,1/7/17b27d4ac3c4ceb15823f18da02184f56ee3f876
+R
+"lc/src/maps/LC49GroupAnagrams.java,9/f/9fc50a3da091d5ecc00473a8ea465d0c35992304
+J
+lc/src/maps/LC1TwoSum.java,d/c/dc7815456065f2daf4a52a003bc961e72f5b6d3a
+Y
+)lc/src/array/LC219Containsdublicates.java,8/4/84e2cff01bf59ceb82a1b1cc3740bf9fb7f4c6bd
+V
+&lc/src/array/LC128LongestSequence.java,4/2/42eac2c2a16206c456dce9fc7ec705f2a7c0174a
