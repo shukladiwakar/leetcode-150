@@ -56,8 +56,6 @@ Z
 *lc/src/twopointers/LC392IsSubsequence.java,b/c/bc05c58e797caa8838adf2de8aec6539bf3304dd
 P
  lc/src/maps/LC205Isomorphic.java,3/9/39fb61f453cb63591ac142df26e50f9c75e6f3fa
-E
-lc/src/dp/Jenkinsfile,8/d/8da7081f8c4ce520aec2610d7a9c383aa291d8a6
 T
 $lc/src/sideLearning/FibPLayList.java,5/4/5407ee681cd02f61c8416582b84d7fabb02a1c4d
 T
@@ -72,3 +70,7 @@ Y
 )lc/src/array/LC219Containsdublicates.java,8/4/84e2cff01bf59ceb82a1b1cc3740bf9fb7f4c6bd
 V
 &lc/src/array/LC128LongestSequence.java,4/2/42eac2c2a16206c456dce9fc7ec705f2a7c0174a
+R
+"lc/src/stack/LC71SimplifyPath.java,b/a/ba8590cf7569d07991f4c092a76fb87bbc742818
+N
+lc/src/thread/MultiThread.java,3/2/32912d8c5cf1d7cfd18a49c28300046529ee0c49
