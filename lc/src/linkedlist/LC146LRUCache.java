@@ -40,10 +40,10 @@ public class LC146LRUCache {
         return true;
     }
 
-    public static void main(String[] args) {
-        LC146LRUCache lc146LRUCache = new LC146LRUCache();
-        lc146LRUCache.constructRectangle(37);
-    }
+//    public static void main(String[] args) {
+//        LC146LRUCache lc146LRUCache = new LC146LRUCache();
+//        lc146LRUCache.constructRectangle(37);
+//    }
 
     public boolean isPowerOfTwo(int n) {
 //        if (n == 1) {
@@ -146,8 +146,7 @@ public class LC146LRUCache {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
 
         List<List<Integer>> res = new ArrayList<>();
-        if (root == null)
-            return res;
+        if (root == null) return res;
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
 
@@ -174,8 +173,7 @@ public class LC146LRUCache {
 
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
-        if (root == null)
-            return res;
+        if (root == null) return res;
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
 
@@ -252,4 +250,37 @@ public class LC146LRUCache {
         }
         return min;
     }
+
+    public static String convertToTitle(int columnNumber) {
+        char ch = 'A';
+        char cz = 'Z';
+        for (int i = ch; i <= cz; i++) {
+            System.out.println((char) i);
+        }
+
+        return null;
+    }
+
+    public static void main(String[] args) {
+        myPow(2, -2);
+    }
+
+    public static double myPow(double x, int n) {
+        double op = x;
+        if (n == 0) {
+            return 1;
+        }
+        int temp = n;
+        if (n < 0) {
+            temp = (-1) * n;
+        }
+        for (int i = 2; i <= temp; i++) {
+            op = op * x;
+        }
+        if (n < 0) {
+            op = 1 / op;
+        }
+        return op;
+    }
+
 }
