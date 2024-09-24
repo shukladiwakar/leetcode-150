@@ -122,18 +122,61 @@ public class MiddleLL {
         return list;
     }
 
+    public static void main(String[] args) {
+        System.out.println(subarraySumLongest(Arrays.asList(1, 6, 3, 1, 2, 4, 5), 10));
+    }
+
     //nums = [1, 6, 3, 1, 2, 4, 5] and target = 10
     public static int subarraySumLongest(List<Integer> nums, int target) {
-        int maxLen = Integer.MIN_VALUE;
-        int window = 1;
-        int left = 0, right = 0;
+        int windowSum = 0;
+        int length = 0;
+        int left = 0;
+        for (int right = 0; right < nums.size(); right++) {
 
-        while (right < nums.size()) {
-
+            System.out.println("left " + left + " right " + right);
+            windowSum += nums.get(right);
+            while (windowSum > target) {
+                windowSum -= nums.get(left);
+                left++;
+            }
+            length = Math.max(length, right - left + 1);
         }
+        return length;
+    }
 
+    public static int longestSubstringWithoutRepeatingCharacters(String s) {
+        int[] count = new int[256];
+        Arrays.fill(count, 0);
+        int max_Len = 0;
+        int left = 0;
+        for (int right = 0; right < s.length(); right++) {
+            char ch = s.charAt(right);
+            count[ch]++;
+            while (count[ch] > 1) {
+                count[s.charAt(left)]--;
+                left++;
+            }
 
-        return 0;
+            max_Len = Math.max(max_Len, right - left + 1);
+        }
+        return max_Len;
+    }
+
+    public static int subarraySumShortest(List<Integer> nums, int target) {
+
+        int left = 0;
+        int max_len = Integer.MIN_VALUE;
+        int window_sum = 0;
+        for (int right = 0; right < nums.size(); right++) {
+            window_sum += nums.get(right);
+
+            while (window_sum >= target) {
+                max_len = Integer.min(max_len, right - left + 1);
+                window_sum = window_sum - nums.get(left);
+                left++;
+            }
+        }
+        return max_len;
     }
 
     public static String multiply(String num1, String num2) {
@@ -149,9 +192,6 @@ public class MiddleLL {
         return String.valueOf(mul);
     }
 
-    public static void main(String[] args) {
-        multiply("2", "3");
-    }
 
     public boolean isPallindrome(String string) {
         int i = 0;
