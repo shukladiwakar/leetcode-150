@@ -1,6 +1,7 @@
 package algomonster.twopointer;
 
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -121,32 +122,89 @@ public class MiddleLL {
         return list;
     }
 
+    public static void main(String[] args) {
+        System.out.println(subarraySumLongest(Arrays.asList(1, 6, 3, 1, 2, 4, 5), 10));
+    }
+
     //nums = [1, 6, 3, 1, 2, 4, 5] and target = 10
-    //i=0,j=0
-    //arr[i] + arr[j]
     public static int subarraySumLongest(List<Integer> nums, int target) {
-        int maxLen = Integer.MIN_VALUE;
-        int sum = 0;
-        int i = 0;
-        int j = 0;
+        int windowSum = 0;
+        int length = 0;
+        int left = 0;
+        for (int right = 0; right < nums.size(); right++) {
 
-        while (j < nums.size() && i < nums.size()) {
-            sum = sum + nums.get(j);
+            System.out.println("left " + left + " right " + right);
+            windowSum += nums.get(right);
+            while (windowSum > target) {
+                windowSum -= nums.get(left);
+                left++;
+            }
+            length = Math.max(length, right - left + 1);
+        }
+        return length;
+    }
 
-            if (sum > target) {
-                sum = sum - nums.get(i);
-                ++i;
-            } else {
-                maxLen = Math.max(maxLen, j - i + 1);
-                j++;
+    public static int longestSubstringWithoutRepeatingCharacters(String s) {
+        int[] count = new int[256];
+        Arrays.fill(count, 0);
+        int max_Len = 0;
+        int left = 0;
+        for (int right = 0; right < s.length(); right++) {
+            char ch = s.charAt(right);
+            count[ch]++;
+            while (count[ch] > 1) {
+                count[s.charAt(left)]--;
+                left++;
+            }
+
+            max_Len = Math.max(max_Len, right - left + 1);
+        }
+        return max_Len;
+    }
+
+    public static int subarraySumShortest(List<Integer> nums, int target) {
+
+        int left = 0;
+        int max_len = Integer.MIN_VALUE;
+        int window_sum = 0;
+        for (int right = 0; right < nums.size(); right++) {
+            window_sum += nums.get(right);
+
+            while (window_sum >= target) {
+                max_len = Integer.min(max_len, right - left + 1);
+                window_sum = window_sum - nums.get(left);
+                left++;
             }
         }
-        return maxLen;
+        return max_len;
     }
 
-    public static void main(String[] args) {
-        subarraySumLongest(List.of(1, 6, 3, 1, 2, 4, 5), 10);
+    public static String multiply(String num1, String num2) {
+        BigInteger mul = new BigInteger(String.valueOf(0));
+        for (int i = num1.length() - 1; i >= 0; i--) {
+            double tempMul = 0;
+            for (int j = num2.length() - 1; j >= 0; j--) {
+                tempMul += ((Integer.parseInt(String.valueOf(num1.charAt(i))) * Math.pow(10, num1.length() - 1 - i)) *
+                        (Integer.parseInt(String.valueOf(num2.charAt(j))) * Math.pow(10, num2.length() - 1 - j)));
+            }
+            mul = mul.add(new BigInteger(String.valueOf(tempMul)));
+        }
+        return String.valueOf(mul);
     }
+
+
+    public boolean isPallindrome(String string) {
+        int i = 0;
+        int j = string.length() - 1;
+
+        while (i < j) {
+            if (string.charAt(i) != string.charAt(j)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 }
 
