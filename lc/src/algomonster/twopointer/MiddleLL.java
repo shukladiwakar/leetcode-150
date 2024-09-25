@@ -103,10 +103,6 @@ public class MiddleLL {
     }
 
 
-    public static void main(String[] args) {
-        subarraySumFixed(List.of(1, 2, 3, 7, 4, 1), 3);
-    }
-
     public static List<Integer> findAllAnagrams(String original, String check) {
 
         int len = check.length();
@@ -126,11 +122,30 @@ public class MiddleLL {
     }
 
     //nums = [1, 6, 3, 1, 2, 4, 5] and target = 10
+    //i=0,j=0
+    //arr[i] + arr[j]
     public static int subarraySumLongest(List<Integer> nums, int target) {
         int maxLen = Integer.MIN_VALUE;
-        int window = 1;
-        
-        return 0;
+        int sum = 0;
+        int i = 0;
+        int j = 0;
+
+        while (j < nums.size() && i < nums.size()) {
+            sum = sum + nums.get(j);
+
+            if (sum > target) {
+                sum = sum - nums.get(i);
+                ++i;
+            } else {
+                maxLen = Math.max(maxLen, j - i + 1);
+                j++;
+            }
+        }
+        return maxLen;
+    }
+
+    public static void main(String[] args) {
+        subarraySumLongest(List.of(1, 6, 3, 1, 2, 4, 5), 10);
     }
 
 }
