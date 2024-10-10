@@ -10,8 +10,10 @@ public class JumpGame2 {
         }
 
         while (cur_pos <= nums.length) {
-        int nexJump = nums[cur_pos];
+            int nexJump = nums[cur_pos];
 
         }
+
+        return -1;
     }
 }
