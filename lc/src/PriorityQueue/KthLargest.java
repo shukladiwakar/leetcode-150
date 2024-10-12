@@ -1,9 +1,6 @@
 package PriorityQueue;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class KthLargest {
 
@@ -13,19 +10,20 @@ public class KthLargest {
     public KthLargest(int k, int[] nums) {
         this.k = k;
         queue = new PriorityQueue<>();
+        Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++) {
+            if (queue.size() > k) {
+                queue.poll();
+            }
             queue.add(nums[i]);
         }
-        System.out.println(queue);
     }
 
     public int add(int val) {
-        queue.offer(val);
-
+        queue.add(val);
         if (queue.size() > k) {
             queue.poll();
         }
-
         return queue.peek();
     }
 
@@ -37,7 +35,6 @@ public class KthLargest {
         kthLargest.add(10);
         kthLargest.add(9);
         kthLargest.add(4);
-
 
     }
 }
