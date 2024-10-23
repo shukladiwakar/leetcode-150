@@ -4,11 +4,6 @@ import java.util.*;
 
 public class KWeakestRows {
 
-    public static void main(String[] args) {
-        int mat[][] = new int[][]{{1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1}};
-        KWeakestRows kWeakestRows = new KWeakestRows();
-        kWeakestRows.kWeakestRows(mat, 3);
-    }
 
     class Row {
         int index;
@@ -56,9 +51,6 @@ public class KWeakestRows {
                 priorityQueue.poll();
             }
         }
-//        System.out.println(priorityQueue.poll());
-//        System.out.println(priorityQueue.poll());
-//        System.out.println(priorityQueue.poll());
 
         for (int i = k - 1; i >= 0; i--) {
             arr[i] = priorityQueue.poll().index;
@@ -66,6 +58,12 @@ public class KWeakestRows {
         return arr;
     }
 
+
+    public static void main(String[] args) {
+        int nums[] = new int[]{2, 1, 3, 3};
+        KWeakestRows kWeakestRows = new KWeakestRows();
+        kWeakestRows.maxSubsequence(nums, 2);
+    }
 
     public int[] maxSubsequence(int[] nums, int k) {
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
@@ -81,8 +79,8 @@ public class KWeakestRows {
         int op[] = new int[k];
         Map<Integer, Integer> indexMap = new HashMap<>();
 
-        for (int i = 0; i < priorityQueue.size(); i++) {
-            indexMap.merge(priorityQueue.poll(), 1, Integer::sum);
+        for (int n : priorityQueue) {
+            indexMap.merge(n, 1, Integer::sum);
         }
         int seq = 0;
         for (int i = 0; i < nums.length; i++) {
