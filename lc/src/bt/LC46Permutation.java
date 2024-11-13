@@ -41,6 +41,7 @@ public class LC46Permutation {
         List<List<Integer>> result = new ArrayList<>();
 
         dfs(result, new ArrayList<>(), nums, new boolean[nums.length]);
+        System.out.println(result);
         return result;
     }
 

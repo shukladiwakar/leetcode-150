@@ -1,7 +1,6 @@
 package bt;
 
 import java.util.Arrays;
-import java.util.Map;
 
 public class LC322CoinChange {
     public int coinChange(int[] coins, int amount) {
