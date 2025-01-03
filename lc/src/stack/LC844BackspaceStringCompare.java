@@ -1,6 +1,8 @@
 package stack;
 
-import java.util.Stack;
+import algomonster.algods.Node;
+
+import java.util.*;
 
 public class LC844BackspaceStringCompare {
 
@@ -49,5 +51,28 @@ public class LC844BackspaceStringCompare {
 //        String temp = stringBuilder.toString().replace(" ", "%20").toString();
 //        System.out.println(temp);
         int changedLength = str.length - trueLength - 1;
+    }
+
+    public static List<List<Integer>> zigZagTraversal(Node<Integer> root) {
+        List<List<Integer>> res = new ArrayList<>();
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.add(root);
+        while (queue.size() > 0) {
+            int level = queue.size();
+
+            List<Integer> level1 = new ArrayList<>();
+            for (int i = 0; i < level; i++) {
+                Node<Integer> node = queue.poll();
+                level1.add(node.val);
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+            }
+            res.add(level1);
+        }
+        return res;
     }
 }
